@@ -38,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={heroRef} className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <div ref={heroRef} className="relative min-h-[90vh] flex items-center pt-16 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           ref={imageRef}
@@ -50,19 +50,19 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
       </div>
       
-      <div className="container mx-auto px-6 z-10 pt-16">
+      <div className="container mx-auto px-6 z-10 pt-8">
         <div 
           ref={textRef} 
           className="max-w-3xl" 
           style={{ opacity: 0 }}
         >
-          <div className="mb-4 inline-block px-3 py-1 bg-terracotta-500/10 rounded-full">
+          <div className="mb-3 inline-block px-3 py-1 bg-terracotta-500/10 rounded-full">
             <span className="text-xs font-medium uppercase tracking-wider text-terracotta-700">Zimbabwean Artist</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-earth-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-earth-900 mb-4 leading-tight">
             Capturing the Spirit of <span className="text-terracotta-600">Zimbabwe</span> Through Art
           </h1>
-          <p className="text-lg md:text-xl text-earth-800/90 mb-8 max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-earth-800/90 mb-6 max-w-2xl leading-relaxed">
             Exploring humanity, heritage, and the natural beauty of Africa through vibrant, 
             emotionally rich compositions that tell stories of our shared experience.
           </p>

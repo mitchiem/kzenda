@@ -6,9 +6,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-earth-900 text-white py-16">
+    <footer className="bg-earth-900 text-white py-12">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <div>
             <Link to="/" className="font-serif text-2xl font-bold mb-4 block">Keith Zenda</Link>
             <p className="text-earth-300 mb-6">
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-earth-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-earth-800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-earth-400 text-sm mb-4 md:mb-0">
             &copy; {currentYear} Keith Zenda. All rights reserved.
           </p>

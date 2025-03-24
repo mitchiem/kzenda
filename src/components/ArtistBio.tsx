@@ -38,26 +38,26 @@ const ArtistBio = () => {
   return (
     <section className="section-spacing bg-earth-100/50" ref={bioRef}>
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div 
             ref={contentRef} 
             className="order-2 lg:order-1"
             style={{ transitionDelay: '200ms' }}
           >
-            <div className="mb-4 inline-block px-3 py-1 bg-terracotta-500/10 rounded-full">
+            <div className="mb-3 inline-block px-3 py-1 bg-terracotta-500/10 rounded-full">
               <span className="text-xs font-medium uppercase tracking-wider text-terracotta-700">About the Artist</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-earth-900 mb-6">Keith Zenda</h2>
-            <p className="text-earth-800 mb-6 leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-earth-900 mb-4">Keith Zenda</h2>
+            <p className="text-earth-800 mb-4 leading-relaxed">
               Born and raised in Zimbabwe, Keith Zenda developed a profound connection to his heritage 
               from an early age. His artwork is a testament to the rich cultural tapestry and natural beauty of his homeland.
             </p>
-            <p className="text-earth-800 mb-6 leading-relaxed">
+            <p className="text-earth-800 mb-4 leading-relaxed">
               Keith's distinctive style merges traditional African themes with contemporary techniques, 
               creating pieces that resonate with both emotional depth and cultural significance. His work 
               focuses primarily on capturing the human experience through portraiture and daily life scenes.
             </p>
-            <p className="text-earth-800 mb-8 leading-relaxed">
+            <p className="text-earth-800 mb-6 leading-relaxed">
               Having exhibited across Africa and internationally, Keith's art has gained recognition for 
               its authenticity and powerful storytelling. Each piece invites viewers to connect with the 
               stories, emotions, and heritage of Zimbabwe.
