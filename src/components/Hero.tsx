@@ -15,10 +15,22 @@ const Hero = () => {
           if (entry.isIntersecting) {
             if (imageRef.current) {
               imageRef.current.classList.add('animate-image-reveal');
+              // Remove the initial opacity: 0 style after animation
+              setTimeout(() => {
+                if (imageRef.current) {
+                  imageRef.current.style.opacity = '0.5'; // Keep image visible at 50% opacity
+                }
+              }, 1200); // Match the animation duration (1.2s)
             }
             
             if (textRef.current) {
               textRef.current.classList.add('animate-fade-in');
+              // Remove the initial opacity: 0 style after animation
+              setTimeout(() => {
+                if (textRef.current) {
+                  textRef.current.style.opacity = '1';
+                }
+              }, 700); // Match the animation duration (0.7s)
             }
           }
         });
@@ -44,8 +56,8 @@ const Hero = () => {
           ref={imageRef}
           src="/lovable-uploads/2b7bcaf4-d417-4e78-a3ac-1c5c4276b17e.png"
           alt="African woman with colorful headwrap"
-          className="w-full h-full object-cover opacity-50 object-center"
-          style={{ opacity: 0 }}
+          className="w-full h-full object-cover object-center"
+          style={{ opacity: 0 }} // Start invisible but will become visible after animation
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
       </div>
@@ -54,7 +66,7 @@ const Hero = () => {
         <div 
           ref={textRef} 
           className="max-w-3xl" 
-          style={{ opacity: 0 }}
+          style={{ opacity: 0 }} // Start invisible but will become visible after animation
         >
           <div className="mb-1 inline-block px-2 py-0.5 bg-terracotta-500/10 rounded-full">
             <span className="text-xs font-medium uppercase tracking-wider text-terracotta-700">Zimbabwean Artist</span>
