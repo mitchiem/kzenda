@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -68,7 +67,7 @@
   }
 
   .section-spacing {
-    @apply py-10 md:py-14;
+    @apply py-6 md:py-10;
   }
 
   .text-balance {

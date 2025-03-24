@@ -95,19 +95,19 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section id="gallery" className="section-spacing" ref={galleryRef}>
+    <section id="gallery" className="section-spacing pt-2" ref={galleryRef}>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-10">
-          <div className="mb-3 inline-block px-3 py-1 bg-savanna-500/10 rounded-full">
+        <div className="text-center mb-6">
+          <div className="mb-2 inline-block px-3 py-1 bg-savanna-500/10 rounded-full">
             <span className="text-xs font-medium uppercase tracking-wider text-savanna-800">Featured Works</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-earth-900 mb-4">Artwork Gallery</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-earth-900 mb-3">Artwork Gallery</h2>
           <p className="text-earth-700 max-w-2xl mx-auto">
             Each piece tells a story of African life, culture, and the human experience through vibrant colors and emotional expression.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {artworks.map((artwork, index) => (
             <div 
               key={artwork.id}
@@ -119,11 +119,11 @@ const Gallery = () => {
                 <img 
                   src={artwork.image} 
                   alt={artwork.title}
-                  className="w-full h-80 object-cover"
+                  className="w-full h-72 object-cover"
                   loading="lazy"
                 />
               </Link>
-              <div className="p-6">
+              <div className="p-4">
                 <h3 className="text-xl font-medium font-serif text-earth-900 mb-2">{artwork.title}</h3>
                 <div className="flex justify-between items-center text-sm text-earth-700">
                   <span>{artwork.year}</span>
@@ -134,7 +134,7 @@ const Gallery = () => {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
+        <div className="mt-8 text-center">
           <Link 
             to="/exhibitions" 
             className="px-6 py-3 border border-earth-300 text-earth-900 font-medium 
