@@ -1,12 +1,27 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
+const routeImages = {
+  '/': '/lovable-uploads/2b7bcaf4-d417-4e78-a3ac-1c5c4276b17e.png', // Default - Child with Bundle
+  '/about': '/lovable-uploads/cf2441b3-c1ef-4ad8-a7d7-4342e51f5a59.png', // Mother's Love
+  '/exhibitions': '/lovable-uploads/4d0b40dd-73d7-414a-990f-d43d6761d98f.png', // Spirits of the Savanna
+  '/artwork': '/lovable-uploads/2b4d15df-dcb4-4c81-b970-a351eb066cf7.png', // Royal Heritage
+};
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+  
+  const getImageForRoute = () => {
+    if (location.pathname.startsWith('/artwork/')) {
+      return routeImages['/artwork'];
+    }
+    
+    return routeImages[location.pathname] || routeImages['/'];
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -15,22 +30,20 @@ const Hero = () => {
           if (entry.isIntersecting) {
             if (imageRef.current) {
               imageRef.current.classList.add('animate-image-reveal');
-              // Remove the initial opacity: 0 style after animation
               setTimeout(() => {
                 if (imageRef.current) {
-                  imageRef.current.style.opacity = '0.5'; // Keep image visible at 50% opacity
+                  imageRef.current.style.opacity = '0.5';
                 }
-              }, 1200); // Match the animation duration (1.2s)
+              }, 1200);
             }
             
             if (textRef.current) {
               textRef.current.classList.add('animate-fade-in');
-              // Remove the initial opacity: 0 style after animation
               setTimeout(() => {
                 if (textRef.current) {
                   textRef.current.style.opacity = '1';
                 }
-              }, 700); // Match the animation duration (0.7s)
+              }, 700);
             }
           }
         });
@@ -54,10 +67,10 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           ref={imageRef}
-          src="/lovable-uploads/2b7bcaf4-d417-4e78-a3ac-1c5c4276b17e.png"
-          alt="African woman with colorful headwrap"
+          src={getImageForRoute()}
+          alt="Featured artwork silhouette"
           className="w-full h-full object-cover object-center"
-          style={{ opacity: 0 }} // Start invisible but will become visible after animation
+          style={{ opacity: 0 }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
       </div>
@@ -66,7 +79,7 @@ const Hero = () => {
         <div 
           ref={textRef} 
           className="max-w-3xl" 
-          style={{ opacity: 0 }} // Start invisible but will become visible after animation
+          style={{ opacity: 0 }}
         >
           <div className="mb-1 inline-block px-2 py-0.5 bg-terracotta-500/10 rounded-full">
             <span className="text-xs font-medium uppercase tracking-wider text-terracotta-700">Zimbabwean Artist</span>
