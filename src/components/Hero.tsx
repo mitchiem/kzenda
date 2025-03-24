@@ -38,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={heroRef} className="relative min-h-[90vh] flex items-center pt-16 overflow-hidden">
+    <div ref={heroRef} className="relative min-h-[60vh] flex items-center pt-8 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           ref={imageRef}
@@ -50,7 +50,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
       </div>
       
-      <div className="container mx-auto px-6 z-10 pt-8">
+      <div className="container mx-auto px-6 z-10 py-4">
         <div 
           ref={textRef} 
           className="max-w-3xl" 
@@ -66,7 +66,7 @@ const Hero = () => {
             Exploring humanity, heritage, and the natural beauty of Africa through vibrant, 
             emotionally rich compositions that tell stories of our shared experience.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 mb-4">
             <Link 
               to="/#gallery" 
               className="px-6 py-3 bg-terracotta-600 text-white font-medium rounded-md 

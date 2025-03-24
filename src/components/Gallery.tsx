@@ -97,8 +97,8 @@ const Gallery = () => {
   return (
     <section id="gallery" className="section-spacing" ref={galleryRef}>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="mb-4 inline-block px-3 py-1 bg-savanna-500/10 rounded-full">
+        <div className="text-center mb-10">
+          <div className="mb-3 inline-block px-3 py-1 bg-savanna-500/10 rounded-full">
             <span className="text-xs font-medium uppercase tracking-wider text-savanna-800">Featured Works</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-earth-900 mb-4">Artwork Gallery</h2>
@@ -134,7 +134,7 @@ const Gallery = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
           <Link 
             to="/exhibitions" 
             className="px-6 py-3 border border-earth-300 text-earth-900 font-medium 
