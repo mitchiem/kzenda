@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <div>
-            <Link to="/" className="font-serif text-2xl font-bold mb-4 block">Keith Zenda</Link>
+            <Logo size="md" className="mb-4 opacity-90" />
             <p className="text-earth-300 mb-6">
               Zimbabwean artist exploring humanity, heritage, and the natural beauty of Africa through vibrant artwork.
             </p>

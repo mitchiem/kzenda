@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +43,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="font-serif text-2xl font-bold text-earth-900">Keith Zenda</Link>
+        <Logo size={isScrolled ? 'sm' : 'md'} className="transition-all duration-300" />
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
