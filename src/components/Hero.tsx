@@ -79,7 +79,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 z-10 py-1">
         <div 
           ref={textRef} 
-          className="max-w-3xl pt-16 md:pt-20" 
+          className="max-w-3xl pt-32 md:pt-40 lg:pt-48" 
           style={{ opacity: 0 }}
         >
           <div className="mb-1 inline-block px-2 py-0.5 bg-terracotta-500/10 rounded-full">
