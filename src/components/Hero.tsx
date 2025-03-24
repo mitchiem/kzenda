@@ -38,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={heroRef} className="relative min-h-[40vh] flex items-center pt-4 overflow-hidden">
+    <div ref={heroRef} className="relative min-h-[30vh] flex items-center pt-2 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           ref={imageRef}
@@ -50,26 +50,26 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
       </div>
       
-      <div className="container mx-auto px-6 z-10 py-2">
+      <div className="container mx-auto px-4 z-10 py-1">
         <div 
           ref={textRef} 
           className="max-w-3xl" 
           style={{ opacity: 0 }}
         >
-          <div className="mb-2 inline-block px-3 py-1 bg-terracotta-500/10 rounded-full">
+          <div className="mb-1 inline-block px-2 py-0.5 bg-terracotta-500/10 rounded-full">
             <span className="text-xs font-medium uppercase tracking-wider text-terracotta-700">Zimbabwean Artist</span>
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-earth-900 mb-3 leading-tight">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-earth-900 mb-2 leading-tight">
             Capturing the Spirit of <span className="text-terracotta-600">Zimbabwe</span> Through Art
           </h1>
-          <p className="text-base md:text-lg text-earth-800/90 mb-4 max-w-2xl leading-relaxed">
+          <p className="text-sm md:text-base text-earth-800/90 mb-2 max-w-2xl leading-relaxed">
             Exploring humanity, heritage, and the natural beauty of Africa through vibrant, 
             emotionally rich compositions that tell stories of our shared experience.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 mb-2">
+          <div className="flex flex-col sm:flex-row gap-2 mb-1">
             <Link 
               to="/#gallery" 
-              className="px-6 py-3 bg-terracotta-600 text-white font-medium rounded-md 
+              className="px-4 py-2 bg-terracotta-600 text-white font-medium rounded-md 
                 transition-all hover:bg-terracotta-700 inline-flex items-center justify-center group"
             >
               Explore Gallery
@@ -77,7 +77,7 @@ const Hero = () => {
             </Link>
             <Link 
               to="/about" 
-              className="px-6 py-3 border border-earth-300 text-earth-900 font-medium 
+              className="px-4 py-2 border border-earth-300 text-earth-900 font-medium 
                 rounded-md transition-all hover:bg-earth-100 inline-flex items-center justify-center"
             >
               About the Artist

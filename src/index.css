@@ -67,7 +67,7 @@
   }
 
   .section-spacing {
-    @apply py-6 md:py-10;
+    @apply py-3 md:py-5;
   }
 
   .text-balance {
