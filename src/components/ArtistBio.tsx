@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Avatar } from "@/components/ui/avatar";
 
 const ArtistBio = () => {
   const bioRef = useRef<HTMLDivElement>(null);
@@ -76,11 +77,22 @@ const ArtistBio = () => {
             style={{ transitionDelay: '400ms' }}
           >
             <div className="relative">
-              <img 
-                src="/lovable-uploads/2b4d15df-dcb4-4c81-b970-a351eb066cf7.png" 
-                alt="Keith Zenda - Artist Portrait" 
-                className="w-full h-auto rounded-lg art-shadow"
-              />
+              <div className="relative mb-6">
+                <img 
+                  src="/lovable-uploads/2b4d15df-dcb4-4c81-b970-a351eb066cf7.png" 
+                  alt="Keith Zenda - Royal Heritage Artwork" 
+                  className="w-full h-auto rounded-lg art-shadow"
+                />
+                <div className="absolute -bottom-4 -right-4">
+                  <Avatar className="h-16 w-16 border-4 border-white art-shadow">
+                    <img
+                      src="/lovable-uploads/8f1cd880-f239-4008-a7cb-9700e1e8f4b4.png"
+                      alt="Keith Zenda"
+                      className="object-cover"
+                    />
+                  </Avatar>
+                </div>
+              </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg art-shadow hidden md:block">
                 <p className="text-earth-900 font-serif italic">
                   "My art is a bridge between heritage and contemporary expression."
