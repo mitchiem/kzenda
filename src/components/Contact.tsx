@@ -127,7 +127,7 @@ const Contact = () => {
                 <Mail className="h-5 w-5 text-terracotta-600 mt-1 mr-3" />
                 <div>
                   <h4 className="font-medium text-earth-900 mb-1">Email</h4>
-                  <p className="text-earth-700">contact@keithzenda.com</p>
+                  <p className="text-earth-700">inquiries@kzenda.art</p>
                 </div>
               </div>
               
