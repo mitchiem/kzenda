@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -78,7 +79,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 z-10 py-1">
         <div 
           ref={textRef} 
-          className="max-w-3xl" 
+          className="max-w-3xl pt-16 md:pt-20" 
           style={{ opacity: 0 }}
         >
           <div className="mb-1 inline-block px-2 py-0.5 bg-terracotta-500/10 rounded-full">
